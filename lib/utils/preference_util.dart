@@ -5,10 +5,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 class PreferenceUtil {
   static late SharedPreferences _preferences;
 
+  // Inicializa as preferências compartilhadas
   static Future<void> init() async {
     _preferences = await SharedPreferences.getInstance();
   }
 
+  // Define as preferências de clima
   static Future<void> setWeather(Weather? weather) async {
     await _preferences.setString(Constants.city,
         weather != null ? weather.city! : Constants.defaultCity);
@@ -34,7 +36,8 @@ class PreferenceUtil {
         weather != null ? weather.humidity! : "0.0");
   }
 
-  static Weather? getWeather(){
+  // Obtém as preferências de clima
+  static Weather? getWeather() {
     return Weather(
       city: _preferences.getString(Constants.city),
       updatedAt: _preferences.getString(Constants.updatedAt),
@@ -50,11 +53,13 @@ class PreferenceUtil {
     );
   }
 
-  static Future<void> remove(String key) async{
+  // Remove uma preferência específica
+  static Future<void> remove(String key) async {
     await _preferences.remove(key);
   }
 
-  static Future<void> clear() async{
+  // Limpa todas as preferências armazenadas
+  static Future<void> clear() async {
     await _preferences.clear();
   }
 }
