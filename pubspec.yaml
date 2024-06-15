@@ -1,0 +1,55 @@
+name: openweather_mvvm
+description: "A new Flutter project."  # Descrição breve do projeto
+
+publish_to: 'none'  # Indica que o projeto não será publicado diretamente (útil para projetos privados)
+
+version: 1.0.0+1  # Versão do aplicativo
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'  # Versão mínima e máxima do SDK Flutter compatível
+
+dependencies:
+  flutter:
+    sdk: flutter  # Dependência principal do Flutter
+
+  cupertino_icons: ^1.0.6  # Ícones Cupertino para uso em iOS
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter  # Dependência para testes no Flutter
+
+  cupertino_icons: ^1.0.2  # Versão específica dos ícones Cupertino (deve ser a mesma ou superior à usada nas dependências principais)
+  http: ^1.2.1  # Cliente HTTP para fazer requisições web
+  provider: ^6.1.2  # Gerenciamento de estado para Flutter
+  intl: ^0.19.0  # Suporte a internacionalização de datas, números e moedas
+  recase: ^4.0.0  # Biblioteca para manipulação de strings (como conversão para camelCase, PascalCase, etc.)
+  shared_preferences: ^2.2.3  # Persistência de dados simples (como preferências do aplicativo)
+  connectivity_plus: ^6.0.3  # Verificação e monitoramento de conectividade de rede
+  geolocator: ^12.0.0  # Obtenção da localização atual do dispositivo
+  geocoding: ^3.0.0  # Conversão de coordenadas geográficas em endereços humanos
+
+  flutter_lints: ^4.0.0  # Conjunto de regras de lint recomendadas para projetos Flutter
+
+flutter:
+  uses-material-design: true  # Indica que o aplicativo utiliza o design de materiais
+
+  assets:  # Lista de recursos estáticos (imagens, etc.) que o aplicativo utilizará
+     - images/sunrise.png
+     - images/humidity.png
+     - images/info.png
+     - images/sunset.png
+     - images/wind.png
+     - images/pressure.png
+     - images/refresh.png
+     - images/new_york_city.png
+     - images/singapore_city.png
+     - images/mumbai_city.png
+     - images/sydney_city.png
+     - images/melbourne_city.png
+     - images/delhi_city.png
+
+  fonts:  # Configuração de fontes personalizadas que o aplicativo utilizará
+     - family: poppins
+       fonts:
+         - asset: fonts/regular_poppins.ttf  # Fonte regular da família Poppins
+
