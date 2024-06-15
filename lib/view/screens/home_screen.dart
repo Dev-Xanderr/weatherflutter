@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:openweather_mvvm/model/api/api_response.dart';
@@ -86,7 +88,6 @@ class _HomeScreenState extends State<HomeScreen> {
     ApiResponse apiResponse = Provider.of<WeatherViewModel>(context).response;
     bool isLoading = apiResponse.status == Status.LOADING;
     String? message = apiResponse.message;
-    // Weather? weather = apiResponse.data as Weather?;
     Weather? weather = savedWeather;
 
     return Scaffold(
@@ -147,9 +148,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildMainContent(Weather? weather) {
-    // if (weather == null) {
-    //   return const SizedBox.shrink();
-    // }
     return Column(
       children: <Widget>[
         HeaderSection(
