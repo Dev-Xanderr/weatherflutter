@@ -17,11 +17,11 @@ class ButtonSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         child: Center(
           child: SizedBox(
-            width: double.infinity, // Match parent width
+            width: double.infinity, 
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 12.0),
               decoration: BoxDecoration(
-                color: Colors.transparent, // Button background color
+                color: Colors.transparent, // Butão de background 
                 border: Border.all(color: Colors.white, width: 2),
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: const [
@@ -29,17 +29,17 @@ class ButtonSection extends StatelessWidget {
                     color: Colors.transparent,
                     spreadRadius: 2,
                     blurRadius: 4,
-                    offset: Offset(0, 3), // changes position of shadow
+                    offset: Offset(0, 3), // altera a posição do shadow
                   ),
                 ],
               ),
               child: Center(
                 child: TextSection(size: 14, text: text,),
-                ),
               ),
             ),
           ),
         ),
-      );
+      ),
+    );
   }
 }
